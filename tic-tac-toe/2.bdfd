@@ -1,5 +1,4 @@
-;$nomention
-$suppressErrors
+$nomention
 $if[$customID==tttleave-$authorID]
 $removeButtons
 $description[
