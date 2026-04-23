@@ -1,0 +1,12 @@
+$nomention
+$cooldown[15s;⏱**|$nickname** vui lòng đợi %time% để có thể sử dụng lệnh!]
+$argsCheck[>1;bạn định chọn ai để chơi cờ caro cùng bạn?]
+$onlyIf[$userExists[$mentioned[>]]==true;❌người dùng bạn chọn không tồn tại!]
+$onlyIf[$isBot[$mentioned[>]]==false;❌bạn không thể chơi cờ caro với bots!]
+$onlyIf[$authorID!=$mentioned[>];❌bạn không thể tự chơi với chính mình!]
+$description[
+### này <@$mentioned[>]>!, <@$authorID> muốn rủ bạn chơi trò cờ caro, bạn có muốn chơi không?]
+$color[$getServerVar[Color]]
+$addButton[no;tttjoin-$mentioned[>];có;success;no;✅]
+$addButton[no;tttleave-$mentioned[>];không;danger;no;❌]
+$setUserVar[ttt;⬛1,⬛2,⬛3,⬛4,⬛5,⬛6,⬛7,⬛8,⬛9,$authorID,$mentioned[>];$mentioned[>]]
